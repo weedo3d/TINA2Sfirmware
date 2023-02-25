@@ -1,0 +1,103 @@
+/**
+ * Marlin 3D Printer Firmware
+ * Copyright (C) 2016 MarlinFirmware [https://github.com/MarlinFirmware/Marlin]
+ *
+ * Based on Sprinter and grbl.
+ * Copyright (C) 2011 Camiel Gubbels / Erik van der Zalm
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ */
+
+/**
+ * Custom Status Screen bitmap
+ *
+ * Place this file in the root with your configuration files
+ * and enable CUSTOM_STATUS_SCREEN_IMAGE in Configuration.h.
+ *
+ * Use the Marlin Bitmap Converter to make your own:
+ * http://marlinfw.org/tools/u8glib/converter.html
+ */
+
+//#define STATUS_SCREENWIDTH 128
+#define STATUS_SCREENWIDTH     85 //Width in pixels
+//#define STATUS_SCREENHEIGHT     19 //Height in pixels
+//#define STATUS_SCREENBYTEWIDTH  15 //Width in bytes
+
+#define STATUS_SCREEN_HOTEND_TEXT_X(E) 5		// (38 + (E) * 20)
+#define STATUS_SCREEN_BED_TEXT_X (HOTENDS > 1 ? 81 : 73)
+
+#define STATUS_SCREEN_FAN_TEXT_X 103
+
+#define STATUS_WIFI_WIDTH     21
+#define STATUS_WIFI_HEIGHT    14
+#define STATUS_WIFI_X    	  105
+#define STATUS_WIFI_Y    	  3
+
+const unsigned char status_wifi_off_bmp[] = {
+	0X00,0X00,0X00,0X10,0X40,0X70,0X38,0XE0,0X50,0X1D,0XC7,0X50,0X0F,0X85,0X50,0X07,
+	0X05,0X50,0X07,0X85,0X50,0X0F,0XC5,0X50,0X1C,0XE5,0X50,0X58,0X65,0X50,0X41,0X05,
+	0X50,0X55,0X55,0X50,0X77,0X77,0X70,0X00,0X00,0X00,
+};
+
+const unsigned char status_wifi_0_bmp[] = {
+	0X00,0X00,0X00,0X00,0X00,0X70,0X00,0X00,0X50,0X00,0X07,0X50,0X00,0X05,0X50,0X00,
+	0X75,0X50,0X00,0X55,0X50,0X07,0X55,0X50,0X05,0X55,0X50,0X75,0X55,0X50,0X75,0X55,
+	0X50,0X75,0X55,0X50,0X77,0X77,0X70,0X00,0X00,0X00,
+};
+
+const unsigned char status_wifi_1_bmp[] = {
+	0X00,0X00,0X00,0X00,0X00,0X70,0X00,0X00,0X50,0X00,0X07,0X50,0X00,0X05,0X50,0X00,
+	0X75,0X50,0X00,0X55,0X50,0X07,0X55,0X50,0X07,0X55,0X50,0X77,0X55,0X50,0X77,0X55,
+	0X50,0X77,0X55,0X50,0X77,0X77,0X70,0X00,0X00,0X00,
+};
+
+const unsigned char status_wifi_2_bmp[] = {
+	0X00,0X00,0X00,0X00,0X00,0X70,0X00,0X00,0X50,0X00,0X07,0X50,0X00,0X05,0X50,0X00,
+	0X75,0X50,0X00,0X75,0X50,0X07,0X75,0X50,0X07,0X75,0X50,0X77,0X75,0X50,0X77,0X75,
+	0X50,0X77,0X75,0X50,0X77,0X77,0X70,0X00,0X00,0X00,
+};
+
+const unsigned char status_wifi_3_bmp[] = {
+	0X00,0X00,0X00,0X00,0X00,0X70,0X00,0X00,0X50,0X00,0X07,0X50,0X00,0X07,0X50,0X00,
+	0X77,0X50,0X00,0X77,0X50,0X07,0X77,0X50,0X07,0X77,0X50,0X77,0X77,0X50,0X77,0X77,
+	0X50,0X77,0X77,0X50,0X77,0X77,0X70,0X00,0X00,0X00,
+};
+
+const unsigned char status_wifi_4_bmp[] = {
+	0X00,0X00,0X00,0X00,0X00,0X70,0X00,0X00,0X70,0X00,0X07,0X70,0X00,0X07,0X70,0X00,
+	0X77,0X70,0X00,0X77,0X70,0X07,0X77,0X70,0X07,0X77,0X70,0X77,0X77,0X70,0X77,0X77,
+	0X70,0X77,0X77,0X70,0X77,0X77,0X70,0X00,0X00,0X00,
+};
+
+//============================================
+
+const unsigned char status_screen0_bmp[] = {
+	0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,
+	0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,
+	0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,
+	0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X3F,0X9C,0XC7,0X04,0X0F,0X00,0X00,
+	0X00,0X00,0X00,0X00,0X24,0X88,0X62,0X04,0X10,0X80,0X00,0X00,0X00,0X3F,0XC0,0X24,
+	0X88,0X62,0X0A,0X00,0X80,0X08,0X20,0X80,0X7F,0XE0,0X04,0X08,0X52,0X0A,0X00,0X80,
+	0X04,0X10,0X40,0X7F,0XE0,0X04,0X08,0X52,0X11,0X01,0X00,0X04,0X10,0X40,0X7F,0XE0,
+	0X04,0X08,0X4A,0X11,0X02,0X00,0X08,0X20,0X80,0X3F,0XC0,0X04,0X08,0X4A,0X1F,0X04,
+	0X00,0X10,0X41,0X00,0X3F,0XC0,0X04,0X08,0X46,0X20,0X88,0X00,0X20,0X82,0X00,0X7F,
+	0XE0,0X04,0X08,0X46,0X20,0X90,0X80,0X20,0X82,0X00,0X7F,0XE0,0X0E,0X1C,0XE2,0X71,
+	0XDF,0X80,0X10,0X41,0X00,0X7F,0XE0,0X00,0X00,0X00,0X00,0X00,0X00,0X08,0X20,0X80,
+	0X1F,0X80,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X0F,0X00,0X00,0X00,0X00,
+	0X00,0X00,0X00,0X3F,0XFF,0XF0,0X06,0X00,0X00,0X00,0X00,0X00,0X00,0X00,0X3F,0XFF,
+	0XF0,
+
+};
+
