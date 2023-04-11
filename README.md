@@ -11,7 +11,7 @@ The network module of TINA2S uses ESP32. The firmware is developed by us. Becaus
 ## Hardware Version 
 - TINA2 Classic: The motherboard model is R62A/R62AS. The MCU chip uses ATMEGA2560. The open source code address is [TINA2firmware](https://github.com/weedo3d/TINA2firmware).
 
-- TINA2 Upgrade: The motherboard model is R72A/R72B. The MCU chip uses GD32F103RET6.
+- TINA2 Upgrade: The motherboard model is R72A/R72B. The MCU chip uses GD32F103RET6. The open source code address is [TINA2Upgradefirmware](https://github.com/weedo3d/Tina2Upgradefirmware).
 
 - TINA2S: The motherboard model is R72H/R72P. The MCU chip uses GD32F103RET6. The stepper motor driver chip uses TMC2208.
 
